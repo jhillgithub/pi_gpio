@@ -64,7 +64,7 @@
         pins.forEach((pin) => {
             pin.addEventListener('click', function() {
                 var pin = this.id;
-                fetchStatus(pin);
+                toggleGPIO(pin);
             });
         });
 
@@ -82,7 +82,7 @@
             var status = await fetch(`/toggle/${pin}`)
             .then(res => res.json())
             .then(response => {
-                d3.select('#' + pin).classed("glow", response.status || true);
+                d3.select('#' + pin).classed("glow", response.status);
             })
             .then(response => console.log('Success:', JSON.stringify(response)))
             .catch(error => console.error('Error:', error));
