@@ -1,0 +1,16 @@
+{
+  "name": "pi_gpio",
+  "version": "1.0.0",
+  "description": "Testing Socket.io on the Raspberry Pi",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "onoff": "^3.2.2"
+  }
+}
